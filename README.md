@@ -18,7 +18,7 @@ Modern portfolio theory is a financial theory developed in 1952 by Harry Markowi
 
 ## Results
 
-The data used for this project contains the historical values of the 40 stocks of the CAC40 as well as the value of the index between June 18, 2019 and June 12, 2020 (1 year of historical data). They can be updated by changing the 'extraction' field in the json file. However, be careful when extracting data from Yahoo finance it is possible that lines containing zeros will be added, which will create a dimension error...
+The data used for this project contains the historical values of the 40 stocks of the CAC40 as well as the value of the index between June 18, 2019 and June 12, 2020 (1 year of historical data). They can be updated by changing the 'extraction' field in the json file. However, be careful when extracting data from Yahoo finance it is possible that rows containing zeros will be added, which will create a dimension error...
 
 ### Efficient frontier
 
