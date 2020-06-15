@@ -28,19 +28,19 @@ This graph highlights the advantage of having a diversified portfolio rather tha
 
 The maximum sharpe ratio is represented by a red star, the minimum volatility by a green star and the maximum sharpe ratio for a portfolio with weights not exceeding 15% by a blue star. The composition of these portfolios will be studied afterwards. Finally, the CAC40 index has been included (purple star). Thus, we can see that there are a multitude of stock combinations that can beat the CAC40 index.
 
-### Maximum sharpe ratio portfolio allocation
+### Portfolio allocation: maximum sharpe ratio
 
 ![alt text](https://github.com/thomascancel/Modern-Portfolio-Theory-Markowitz/blob/master/results/max_sharpe_allocation.png?raw=true)
 
 The maximum sharpe ratio is obtained by creating a portfolio composed of 58.89% STM.PA and 41.11% SAN.PA. The annualised return is then 47% for a risk of 36%. Constraints on weights can be added to obtain a more diversified portfolio.
 
-### Maximum sharpe ratio portfolio allocation with weights<=15% 
+### Portfolio allocation: maximum sharpe ratio with weights<=15% 
 
 ![alt text](https://github.com/thomascancel/Modern-Portfolio-Theory-Markowitz/blob/master/results/max_sharpe_allocation_bis.png?raw=true)
 
 Here I have added as a constraint to my portfolio that the weights cannot be over 15%. This more diversified portfolio offers an annualised return of 27% for a risk of 27%.
 
-### Minimum risk portfolio allocation
+### Portfolio allocation: minimum risk
 
 ![alt text](https://github.com/thomascancel/Modern-Portfolio-Theory-Markowitz/blob/master/results/min_vol_allocation.png?raw=true)
 
