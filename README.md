@@ -1,5 +1,5 @@
 # Modern-Portfolio-Theory-Markowitz
-In this project, I use modern portfolio theory to build the most efficient portfolio with the 40 stocks listed in the CAC40 index.
+In this project, I used modern portfolio theory to build the most efficient portfolio with the 40 stocks listed in the CAC40 index.
 
 ## Requirements
 Here are the versions of the librairies I used for this project.
