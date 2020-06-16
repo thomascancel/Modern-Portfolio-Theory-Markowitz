@@ -22,7 +22,6 @@ class Model:
         self.dir = dir
 
     def portfolio_annualised_performance(self, weights):
-        """Compute the annualized return and volatility of the portfolio"""
         returns = np.sum(self.mean_returns * weights) * self.data.shape[0]
         std = np.sqrt(np.dot(weights.T, np.dot(self.cov_matrix, weights))) * np.sqrt(self.data.shape[0])
         return std, returns
@@ -31,20 +30,10 @@ class Model:
         p_var, p_ret = self.portfolio_annualised_performance(weights)
         return -(p_ret - self.risk_free_rate) / p_var
 
-    def max_sharpe_ratio(self):
+    def max_sharpe_ratio(self, w_min, w_max):
         num_assets = self.nb_stocks
         constraints = ({'type': 'eq', 'fun': lambda x: np.sum(x) - 1})
-        bound = (0.0, 1.0)
-        bounds = tuple(bound for asset in range(num_assets))
-        result = sco.minimize(self.neg_sharpe_ratio, num_assets * [1. / num_assets, ],
-                              method='SLSQP', bounds=bounds, constraints=constraints)
-        return result
-
-    def max_sharpe_ratio_bis(self):
-        """Find the maximum sharp ratio with weights <= 15%"""
-        num_assets = self.nb_stocks
-        constraints = ({'type': 'eq', 'fun': lambda x: np.sum(x) - 1})
-        bound = (0.0, 0.15)
+        bound = (w_min, w_max)
         bounds = tuple(bound for asset in range(num_assets))
         result = sco.minimize(self.neg_sharpe_ratio, num_assets * [1. / num_assets, ],
                               method='SLSQP', bounds=bounds, constraints=constraints)
@@ -82,12 +71,12 @@ class Model:
         return efficients
 
     def display_ef_with_selected(self):
-        max_sharpe = self.max_sharpe_ratio()
+        max_sharpe = self.max_sharpe_ratio(0.0, 1.0)
         sdp, rp = self.portfolio_annualised_performance(max_sharpe['x'])
         max_sharpe_allocation = pd.DataFrame(max_sharpe.x, index=self.data.columns, columns=['allocation'])
         max_sharpe_allocation.allocation = [round(i * 100, 2) for i in max_sharpe_allocation.allocation]
 
-        max_sharpe_bis = self.max_sharpe_ratio_bis()
+        max_sharpe_bis = self.max_sharpe_ratio(0.0, 0.15)
         sdp_bis, rp_bis = self.portfolio_annualised_performance(max_sharpe_bis['x'])
         max_sharpe_allocation_bis = pd.DataFrame(max_sharpe_bis.x, index=self.data.columns, columns=['allocation'])
         max_sharpe_allocation_bis.allocation = [round(i * 100, 2) for i in max_sharpe_allocation_bis.allocation]
@@ -146,11 +135,11 @@ class Model:
                 label='efficient frontier')
         plt.gca().xaxis.set_major_formatter(PercentFormatter(1))
         plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
-        ax.set_title('Portfolio Optimization with Individual Stocks')
+        ax.set_title('Portfolio Optimisation with Individual Stocks')
         ax.set_xlabel('annualised volatility')
         ax.set_ylabel('annualised returns')
         ax.legend(labelspacing=0.8)
-        plt.savefig(os.path.join(self.dir, 'Portfolio_Optimization_of_the_CAC40_stocks.png'), bbox_inches='tight', dpi=400)
+        plt.savefig(os.path.join(self.dir, 'Portfolio_Optimisation_of_the_CAC40_stocks.png'), bbox_inches='tight', dpi=400)
 
         plt.figure(figsize=(14, 10))
         sns.set_style("darkgrid")
