@@ -22,7 +22,7 @@ The data used for this project contains the historical values of the 40 stocks o
 
 ### Efficient frontier
 
-![alt text](https://github.com/thomascancel/Modern-Portfolio-Theory-Markowitz/blob/master/results/Portfolio_Optimization_of_the_CAC40_stocks.png?raw=true)
+![alt text](https://github.com/thomascancel/Modern-Portfolio-Theory-Markowitz/blob/master/results/Portfolio_Optimisation_of_the_CAC40_stocks.png?raw=true)
 
 This graph highlights the advantage of having a diversified portfolio rather than a single stock. In fact, for all stocks except STM.PA, it is possible to build a portfolio that will offer a higher return for a certain level of risk. The efficient frontier provides the lowest risk for a certain return. Therefore, it is logical that the stock with the highest return (STM.PA) belongs to the efficient frontier. 
 
