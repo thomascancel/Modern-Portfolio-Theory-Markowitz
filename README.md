@@ -32,7 +32,7 @@ The maximum sharpe ratio is represented by a red star, the minimum volatility by
 
 ![alt text](https://github.com/thomascancel/Modern-Portfolio-Theory-Markowitz/blob/master/results/max_sharpe_allocation.png?raw=true)
 
-The maximum sharpe ratio is obtained by creating a portfolio composed of 58.89% STM.PA and 41.11% SAN.PA. The annualised return is then 47% for a risk of 36%. Constraints on weights can be added to obtain a more diversified portfolio.
+The maximum sharpe ratio is obtained by creating a portfolio composed of 48.77% STM.PA and 51.23% SAN.PA. The annualised return is then 39% for a risk of 33%. Constraints on weights can be added to obtain a more diversified portfolio.
 
 ### Portfolio allocation: maximum sharpe ratio with weights<=15% 
 
@@ -44,4 +44,4 @@ Here I have added as a constraint to my portfolio that the weights cannot be ove
 
 ![alt text](https://github.com/thomascancel/Modern-Portfolio-Theory-Markowitz/blob/master/results/min_vol_allocation.png?raw=true)
 
-To create the minimum risk portfolio, we need to increase the diversification. Thus, 8 stocks are needed with weights between 27.08% (SAN.PA) and 0.58% (VIV.PA). In such cases, the annualised return is 5% for a risk of 20%.
+To create the minimum risk portfolio, we need to increase the diversification. Thus, 8 stocks are needed with weights between 27.72% (SAN.PA) and 0.77% (VIV.PA). In such cases, the annualised return is 4% for a risk of 20%.
