@@ -14,11 +14,11 @@ Here are the versions of the librairies I used for this project.
 
 ## Modern Portfolio Theory
 
-Modern portfolio theory is a financial theory developed in 1952 by Harry Markowitz. It explains how rational investors use diversification to optimize their portfolios and find the best risk-return trade-off. Indeed, if the return of a portfolio is equal to the weighted average of each individual stock's return in the portfolio, it is not the case for the risk. The risk is about how volatile the asset is, if you have more than one stock in your portfolio, then you have to take count of how these stocks movement correlates with each other. The beauty of diversification is that you can even get lower risk than a stock with the lowest risk in your portfolio, by optimising the allocation.
+Modern portfolio theory is a financial theory developed in 1952 by Harry Markowitz. It explains how rational investors use diversification to optimise their portfolios and find the best risk-return trade-off. Indeed, if the return of a portfolio is equal to the weighted average of each individual stock's return in the portfolio, it is not the case for the risk. The risk is about how volatile the asset is, if you have more than one stock in your portfolio, then you have to take count of how these stocks movement correlates with each other. The beauty of diversification is that you can even get lower risk than a stock with the lowest risk in your portfolio, by optimising the allocation.
 
 ## Results
 
-The data used for this project contains the historical values of the 40 stocks of the CAC40 as well as the value of the index between June 18, 2019 and June 12, 2020 (1 year of historical data). They can be updated by changing the 'extraction' field in the json file. However, be careful when extracting data from Yahoo finance it is possible that rows containing zeros will be added, which will create a dimension error...
+The data used for this project contains the historical values of the 40 stocks of the CAC40 as well as the value of the index between July 2, 2019 and June 30, 2020 (1 year of historical data). They can be updated by changing the 'extraction' field in the json file. However, be careful when extracting data from Yahoo finance it is possible that rows containing zeros will be added, which will create a dimension error...
 
 ### Efficient frontier
 
