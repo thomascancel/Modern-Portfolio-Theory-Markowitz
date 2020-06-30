@@ -15,7 +15,7 @@ def main():
         DataLoader(configs['data']['tickers'], configs['data']['benchmark'], configs['data']['column'],
                    configs['data']['save_dir']).get_data()
 
-    # Read csv files
+    # Read excel files
     data = pd.read_excel(os.path.join(configs['data']['save_dir'], 'CAC40_stocks.xlsx'), index_col=0)
     benchmark = pd.read_excel(os.path.join(configs['data']['save_dir'], 'CAC40_index.xlsx'), index_col=0)
 
